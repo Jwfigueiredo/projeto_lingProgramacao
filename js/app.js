@@ -16,6 +16,19 @@ const LIMITE_ATIVOS = 5;
 
 
 // =============================
+// 💾 LOCALSTORAGE
+// =============================
+// Salva os ativos no navegador
+
+function salvarNoLocalStorage() {
+    localStorage.setItem(
+        "ativos",
+        JSON.stringify([...ativosAdicionados])
+    );
+}
+
+
+// =============================
 // ⚙️ FUNÇÃO PRINCIPAL
 // =============================
 
@@ -41,9 +54,11 @@ async function processarAtivo(ativo) {
 
         adicionarTabela(fii, () => {
             ativosAdicionados.delete(ativo);
+            salvarNoLocalStorage(); // 🔥 atualiza ao remover
         });
 
         ativosAdicionados.add(ativo);
+        salvarNoLocalStorage(); // 🔥 salva ao adicionar
 
     } catch (error) {
         alert(error.message);
@@ -96,4 +111,19 @@ document.getElementById("limparTabela")
 
     tabela.innerHTML = "";
     ativosAdicionados.clear();
+    localStorage.removeItem("ativos"); // 🔥 limpa storage
+});
+
+
+// =============================
+// 🔄 CARREGAR DADOS SALVOS
+// =============================
+
+window.addEventListener("DOMContentLoaded", async () => {
+
+    const ativosSalvos = JSON.parse(localStorage.getItem("ativos")) || [];
+
+    for (const ativo of ativosSalvos) {
+        await processarAtivo(ativo);
+    }
 });
