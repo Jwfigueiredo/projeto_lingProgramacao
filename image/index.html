@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado Financeiro</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- imagem -->
+    <link rel="icon" type="image/png" href="image/fiis.png">
+     <!-- Sweet Alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+</head>
+<body>
+    
+    <form class="formulario">
+       
+       <h2>TENHA ACESSO A COTAÇÃO DOS SEU FII DESEJADO</h2>
+        <label for="">Selecione seu fundo</label>
+        <select id="fundo">
+        <option value="" disabled selected ></option>
+
+            <option value="HGLG11">HGLG11</option>
+            <option value="KNCR11">KNCR11</option>
+            <option value="KNRI11">KNRI11</option>
+            <option value="MXRF11">MXRF11</option>
+            <option value="VISC11">VISC11</option>
+            <option value="KNIP11">KNIP11</option>
+            <option value="ISNT11">ISNT11</option>
+            <option value="ISEN11">ISEN11</option>
+            <option value="TRXF11">TRXF11</option>
+            <option value="BTLG11">BTLG11</option>
+            <option value="XPLG11">XPLG11</option>
+            <option value="FTCE11">FTCE11</option>
+            <option value="ISTT11">ISTT11</option>
+            <option value="CPTS11">CPTS11</option>
+            <option value="HGRU11">HGRU11</option>
+            <option value="IRIM11">IRIM11</option>
+            <option value="IRDM11">IRDM11</option>
+            <option value="KDIF11">KDIF11</option>
+        </select>
+        <button id="btnBuscar">Buscar</button>
+        
+                                 
+        <p>Fundos mais buscados</p>
+
+       
+        <div class="botoes">
+        <button type="button" onclick="selecionarFII('HGLG11')">HGLG11</button>
+        <button type="button" onclick="selecionarFII('KNRI11')">KNRI11</button>
+        <button type="button" onclick="selecionarFII('MXRF11')">MXRF11</button>
+        <button type="button" onclick="selecionarFII('XPLG11')">XPLG11</button>
+        <button type="button" onclick="selecionarFII('KNCR11')">KNCR11</button>
+        <button type="button" onclick="selecionarFII('VISC11')">VISC11</button>
+        </div>
+            
+        <!-- Tabela -->
+        <table>
+        <thead>
+            <tr>
+            <th>ATIVO</th>
+            <th>VALOR</th>
+            <th>VAR. 12m <div class="card">📈 Alta 📉 Baixa</div> </th>
+            <th>INSTITUIÇÃO</th>
+            <th>TIPO</th>
+            </tr>
+        </thead>
+        <tbody id="tabela"></tbody>
+        </table>
+        <button type="button" id="limparTabela" class="limpar">Limpar</button>
+        
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        </form>
+    <script type="module" src="js/app.js"></script>
+    
+</body>
+</html>

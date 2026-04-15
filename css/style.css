@@ -1,0 +1,141 @@
+
+body{
+    margin: 0;
+    background: url("../image/fundo.jpeg") no-repeat center center;
+    background-size: cover;
+    color:rgb(24, 74, 12);
+    font-family: sans-serif, Arial, Verdana;
+    display:  flex; /* ativa o flexbox no body*/
+    justify-content: center; /* Centreliza horizontalmente*/
+    align-items: center; /* Centraliza verticalmente*/
+    height: 100vh;/* Define a altura como 100% do viewport-view height*/    
+    }
+
+h2{
+    text-align: center;
+    color: #333333;
+    margin-bottom: 24px; /* Margem externa abaixo*/
+    font-size: 35px;
+    font-family: sans-serif;
+
+}
+
+p{
+     text-align: center;
+    color: #333333;
+    margin-bottom: 24px; /* Margem externa abaixo*/
+    font-size: 35px;
+    font-family: sans-serif;
+}
+
+label{
+    display: block; /*Mostra um em cada linha - bloco*/
+    margin-top: 8px;
+    font-weight: bold;  /* negrito*/
+    font-size: 24px;
+}
+select {
+  width: 50%;
+  padding: 10px 12px;
+  font-size: 14px;
+  color: #0c0303;
+
+  border: 1px solid #ccc;
+  border-radius: 6px;
+
+  background-color: #fff;
+  cursor: pointer;
+}
+input{
+    width: 50%; /*Ocupa 100% da largura disponivel*/
+    padding: 8px;  /* espaço interno */
+    margin-top: 4px;
+    border: 1px solid #cccccc; /* criar borda*/
+    border-radius: 8px; /*arredonda os cantos*/
+    font-size: 24px;
+}
+button {
+    background: #a62c4b;
+    color: #0c0303;
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+    margin-left: 4px;
+    margin-top: 4px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+table{
+    width: 100%; 
+    padding: 8px;  
+    border: 1px solid #cccccc; 
+    margin-top: 18px;
+    border-radius: 8px; 
+    color:#05242b;
+    font-size: 18px;
+    background: #bef6cd;
+
+}
+div{
+    font-size: 14px;
+  
+}
+.limpar:hover{
+    background: #792727;
+}
+.botoes {
+    display: flex;
+    flex-wrap: wrap; /* quando passar da tela quebra de linha */
+    gap: 10px; /* espaço entre botões */
+    justify-content: center; /* centraliza */
+}
+.botoes button {
+    padding: 6px 12px; /* menor */
+    font-size: 14px;
+    border-radius: 8px;
+    background: #f7f472;
+    border: none;
+    cursor: pointer;
+}
+th {
+    text-align: center;
+    font-weight: bold;
+}
+
+td {
+    text-align: center;
+    vertical-align: middle; 
+}
+.positivo {
+  color: green;
+  font-weight: bold;
+}
+
+.negativo {
+  color: red;
+  font-weight: bold;
+}
+
+.neutro {
+  color: black;
+  font-weight: bold;
+}
+
+.formulario {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 16px 16px rgba(0,0,0,1);
+    width: 100%;
+    max-width: 800px;
+}
+/* parametros do box shadow
+0 - deslocamento horizontal
+8 - deslocamento vertical
+24 - blur - embaçamento. Quanto > , mais suave fica
+rgba -  o a é de alpha ou transparência . é sempre 0 a 1
+*/
+
+/* Identificadores no CSS
+
